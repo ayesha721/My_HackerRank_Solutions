@@ -1,0 +1,21 @@
+import numpy as np
+
+# Read dimensions
+n, m = input().split()
+n = int(n)
+m = int(m)
+
+# Read the next N lines, each with M integers
+matrix = []
+for _ in range(n):
+    row = input().split()
+    matrix.append([int(x) for x in row])
+
+# Convert to NumPy array
+arr = np.array(matrix)
+
+# Print transpose
+print(np.transpose(arr))
+
+# Print flattened array
+print(arr.flatten())
